@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RAID</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>RAID технология</h1>
+        </div>
+        <div id="content">
+            <div id="nav">
+                <h3>Меню</h3>
+                <ul>
+                    <li class="navi"><a href="index.html">Начало</a></li>
+                    <li class="navi"><a href="whatis.html">Какво е RAID?</a></li>
+                    <li class="navi"><a href="standart.html">Стандартни RAID нива</a></li>
+                    <li class="navi"><a class="selected" href="hybrid.html">Хибридни RAID нива</a></li>
+                    <li class="navi"><a href="types.html">Типове RAID</a></li>
+                    <li class="navi"><a href="conclusion.html">Заключение</a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <h2>Комбинация от RAID (Хибридни)</h2>
+                <h3>RAID 1+0 (10)</h3>
+                <p>Това ниво представлява комбинация от RAID 1 и RAID 0 – т.е. от data mirroring и data striping. В този
+                    случай блоковете от данни се записват огледално (информацията се дублира) и едновременно с това се
+                    разпределят между двойка дискове. Тук има по-голяма производителност и защита на данните от RAID 1,
+                    но цената му е много по-висока, заради необходимостта от минимум 4 диска. Масивът може да понесе
+                    множество загуби на устройства, стига едно огледално копие да не загуби всичките дискове.</p>
+                    <img src="images/raid-level-10.png" alt="raid-level-10" width="300" height="262" />
+                <h3>RAID 0+1</h3>
+                <p>Тук схемата на функциониране е обратна на 1+0. Първо информацията се разпределя последователно на
+                    блокове и след това те се дублират. Отново минималното изискване е 4 дискови устройства, което
+                    предопределя и високата цена. Рискът от загуба на информация е по-голям, отколкото при RAID 1+0.</p>
+                    <img src="images/raid-level-01.png" alt="raid-level-01" width="300" height="260" />
+                <h3>RAID 0+3</h3>
+                <p>Нивото обединява начинът на работа на RAID 0 и RAID 3. Използва се разделяне (striping) както при
+                    RAID 0, но при разпределение на блоковете по схемата на RAID 3. Така се увеличава надеждността на
+                    RAID 3, но респективно с това се повишава и цената.</p>
+                    <img src="images/raid-level-03.png" alt="raid-level-03" width="330" height="200" />
+                <h3>RAID 5+0</h3>
+                <p>Съчетание между разпределението на битовете за четност при RAID 5 със stiping-a на RAID 0. Подобрява
+                    се надеждността на RAID 5 без да се намалява защитата на данните.</p>
+                    <img src="images/raid-level-50.jpeg" alt="raid-level-50" width="414" height="250" />
+                <h3>RAID 7</h3>
+                <p>Този RAID е запазена марка на Storage Computer Corporation. Показателите на максималния трансфер при
+                    четене на файлове, независимо малки или големи, е изключително висок. Начинът на работа обединява
+                    РАЙД 3 и РАЙД 4, но предлага много по-голяма производителност от тях. Той трудно се намира на пазара
+                    и държи висока цена.</p>
+                    <img src="images/raid-level-7.jpg" alt="raid-level-7" width="455" height="250" />
+            </div>
+        </div>
+        <div id="footer">
+            Copyright &copy; 2020 Constantine Shterev.
+        </div>
+    </div>
+</body>
+
+</html>
